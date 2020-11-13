@@ -2,10 +2,10 @@ package com.example.calc;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
@@ -20,12 +20,12 @@ class CalculatorTest {
 		
 	}
 	
-	@Before
+	@BeforeEach
 	public static void setup() {
 		//runs before each test
 	}
 	
-	@After
+	@AfterEach
 	public static void tearDown() {
 		//runs after each test
 	}
@@ -43,7 +43,7 @@ class CalculatorTest {
 	
 	@Test
 	public void testFactorialValidNum() {
-		int fact = Calculator.factorial(4);
+		int fact = Calculator.factorial(5);
 		assertEquals(120, fact, "5! is 120");
 	}
 	
